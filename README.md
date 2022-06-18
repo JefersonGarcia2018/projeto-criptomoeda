@@ -3,20 +3,12 @@
 
 # Projeto desenvolvido utilizando Laravel 9 + PHP 8 + Mysql
 
-Projeto desenvolvido utilizando o framework LARAVEL 8, com implementação de rotas com autenticação. Utilizado o framework Bootstrap para layout e responsividade. Em parte do projeto, foi implementado Ajax, por meio de JavaScript, para consumo de API REST implementada no back-end.
-
+Este projeto foi desenvolvido em LARAVEL com objetivo de buscar os preços de criptomoedas fornecidos pela da API da BINANCE através do endpoint: https://testnet.binancefuture.com/fapi/v1/ticker/price .
 ## Funcionalidades do Sistema
-- Cadastro/internação de pacientes.
-- Cadastro de funcionários dos seguinte setores: RH, recepção, enfermagem e medicina.
-- Possui a funcionalidade de relatórios de enfermagem.
-- Possui as funcionalidades de prescrição e relatórios médicos.
-
-## Dependências/libs/plugin utilizados
-
-- [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/download/): versão 5.1.3
-- [jQuery](https://jquery.com/download/): versão 3.6.0
-- [jQuery Mask Plugin](https://igorescobar.github.io/jQuery-Mask-Plugin/)
-- [pt-br-validator](https://github.com/LaravelLegends/pt-br-validator): versão 9.0
+A busca desses dados é realizada através da interface de linha de comando Artisan do Laravel.
+Foram criados dois comandos Artisan:
+- php artisan c:saveBidPriceOnDataBase --> busca dados de criptomoedas no endpoint https://testnet.binancefuture.com/fapi/v1/ticker/price e os salva na Base de Dados Mysql.
+- php artisan c:checkAvgBidPrice --> verifica o preço médio da criptomoeda informada e retorna se o preço (último) está menor do que 0.5% do que o preço médio.
 
 ## Ambiente de desenvolvimento
 Projeto implementado e rodado em ambiente de desenvolvimento local, com sistema operacional Windows e pacote XAMPP: servidor web Apche e banco de dados MySQL.
@@ -25,16 +17,15 @@ Projeto implementado e rodado em ambiente de desenvolvimento local, com sistema 
 Primeiro passo, clonar o projeto:
 ``` bash
 # Clonar
-git clone https://github.com/JefersonGarcia2018/Laravel-Sistema-Hospitalar.git
+git clone https://github.com/JefersonGarcia2018/projeto-criptomoeda.git
 
-# Acessar
-cd Laravel-Sistema-Hospitalar
+# Acessar o diretório do projeto
+cd projeto-criptomoeda
 ```
 
 ## Configuração
 ``` bash
 # Atualizar dependências
-npm install
 composer install
 
 # Configurar variáveis de ambiente
@@ -44,14 +35,6 @@ cp .env.example .env
 #Agora, deve-se gerar a [ APP_KEY ] com o seguinte comando:
 php artisan key:generate
 
-# Executar migrations (tabelas e Seeders)
-php artisan migrate --seed
+# Executar migrations (tabelas)
+php artisan migrate
 ```
-# Login
-O usuário/funcionário inicial, para Login, terá acesso para registrar novos funcionários para cada setor: Recepção, Medicina e Enfermagem. E a senha inícial, destes novos funcionários, é o número do CPF sem pontuação. Os funcionários podem redefinir sua senha na opção: configuração->redefinir senha
-``` bash
-email: analista_rh@gmail.com
-senha: 12345678
-```
-# Vídeos do Sistema Hospitalar
-- [001 - Sistema Hospitalar - Mostrando Tela inicial e fazendo Login](https://www.youtube.com/watch?v=kkkudcWr43s&list=PLziiWDFoVJ3a1AVlct3AOQ03F0SU6hlxs)
