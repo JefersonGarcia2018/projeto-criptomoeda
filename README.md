@@ -1,9 +1,6 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
-
 # Projeto desenvolvido utilizando Laravel 9 + PHP 8 + Mysql
 
-Este projeto foi desenvolvido em LARAVEL com objetivo de buscar os preços de criptomoedas fornecidos pela da API da BINANCE através do endpoint: https://testnet.binancefuture.com/fapi/v1/ticker/price .
+Este projeto foi desenvolvido em LARAVEL com objetivo de buscar os preços de criptomoedas fornecidos pela API da BINANCE através do endpoint: https://testnet.binancefuture.com/fapi/v1/ticker/price .
 ## Funcionalidades do Sistema
 A busca desses dados é realizada através da interface de linha de comando Artisan do Laravel.
 Foram criados dois comandos Artisan:
