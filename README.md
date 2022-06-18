@@ -40,3 +40,4 @@ php artisan key:generate
 # Executar migrations (tabelas)
 php artisan migrate
 ```
+## Pronto!
