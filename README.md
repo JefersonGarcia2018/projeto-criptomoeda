@@ -8,8 +8,8 @@ Foram criados dois comandos Artisan:
 - php artisan c:checkAvgBidPrice símboloDaCriptomoeda --> pega o preço do último registro da criptomoeda informada e retorna se esse preço(último) está menor do que 0.5% do preço médio dos últimos 100 registros.
 
 Exemplos da execução dos comandos artisan com o símbolo da criptomoeda Ethereum:
-Ex: php artisan c:saveBidPriceOnDataBase ETHBUSD
-Ex: php artisan c:checkAvgBidPrice ETHBUSD
+- Ex: php artisan c:saveBidPriceOnDataBase ETHBUSD
+- Ex: php artisan c:checkAvgBidPrice ETHBUSD
 
 ## Ambiente de desenvolvimento
 Projeto implementado e rodado em ambiente de desenvolvimento local, com sistema operacional Windows e pacote XAMPP: servidor web Apche e banco de dados MySQL.
