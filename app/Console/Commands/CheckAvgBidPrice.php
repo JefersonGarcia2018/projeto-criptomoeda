@@ -19,7 +19,7 @@ class CheckAvgBidPrice extends Command
      *
      * @var string
      */
-    protected $description = 'Verifica o preço médio da criptomoeda informada e retorna se o preço (último) está menor do que 0.5% do que o preço médio.';
+    protected $description = 'pega o preço do último registro da criptomoeda informada e retorna se esse preço(último) está menor do que 0.5% do preço médio dos últimos 100 registros.';
 
     /**
      * Execute the console command.
@@ -30,6 +30,6 @@ class CheckAvgBidPrice extends Command
     {
         BidPrice::checkBidePrice($this->argument('criptomoeda'))?
         $this->info("Preco com valor menor do que o valor 0.5% menor que o valor médio dos últimos 100 precos"):
-        $this->info('Preco maior');
+        $this->info('Preco não atingiu o valor 0.5% menor que o valor médio');
     }
 }

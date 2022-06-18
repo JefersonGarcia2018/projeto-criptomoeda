@@ -47,7 +47,7 @@ class BidPrice
     }
 
     /**
-     * Verifica o preço médio da criptomoeda informada e retorna true se o preço (último) está menor do que 0.5% do que o preço médio.
+     * Pega o preço do último registro da criptomoeda informada e retorna se esse preço(último) está menor do que 0.5% do preço médio dos últimos 100 registros.
      * 
      * @param string $nomeCripto
      * @return bool

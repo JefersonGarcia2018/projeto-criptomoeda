@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\MinhasClasses\BidPrice;
 
-class saveBidPriceOnDataBase extends Command
+class SaveBidPriceOnDataBase extends Command
 {
     /**
      * The name and signature of the console command.
