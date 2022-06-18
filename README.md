@@ -41,3 +41,5 @@ php artisan key:generate
 php artisan migrate
 ```
 ## Pronto!
+Símbolos de algumas criptomoedas que podem ser usados nos comandos artisan: (separados por hífem)
+- ETHBUSD - ONTUSDT - CHZUSDT - 1000LUNCBUSD - FLOWUSDT - SOLUSDT - RVNUSDT - FLMUSDT - DARUSDT - BTCDOMUSDT - IMXUSDT - ALPHAUSDT - 1000XECUSDT - SOLBUSD - BTCUSDT_220930 - DOTUSDT - CELRUSDT - KLAYUSDT - CTKUSDT - SKLUSDT - DUSKUSDT - BATUSDT - TLMBUSD - MASKUSDT - SXPUSDT - VETUSDT - UNIUSDT ... 
