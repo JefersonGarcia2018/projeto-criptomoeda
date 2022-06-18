@@ -4,8 +4,12 @@ Este projeto foi desenvolvido em LARAVEL com objetivo de buscar os preços de cr
 ## Funcionalidades do Sistema
 A busca desses dados é realizada através da interface de linha de comando Artisan do Laravel.
 Foram criados dois comandos Artisan:
-- php artisan c:saveBidPriceOnDataBase --> busca dados de criptomoedas no endpoint https://testnet.binancefuture.com/fapi/v1/ticker/price e os salva na Base de Dados Mysql.
-- php artisan c:checkAvgBidPrice --> verifica o preço médio da criptomoeda informada e retorna se o preço (último) está menor do que 0.5% do que o preço médio.
+- php artisan c:saveBidPriceOnDataBase símboloDaCriptomoeda  --> busca dados de criptomoedas no endpoint https://testnet.binancefuture.com/fapi/v1/ticker/price e os salva na Base de Dados Mysql.
+- php artisan c:checkAvgBidPrice símboloDaCriptomoeda --> pega o preço do último registro da criptomoeda informada e retorna se esse preço(último) está menor do que 0.5% do preço médio dos últimos 100 registros.
+
+Exemplos da execução dos comandos artisan com o símbolo da criptomoeda Ethereum:
+Ex: php artisan c:saveBidPriceOnDataBase ETHBUSD
+Ex: php artisan c:checkAvgBidPrice ETHBUSD
 
 ## Ambiente de desenvolvimento
 Projeto implementado e rodado em ambiente de desenvolvimento local, com sistema operacional Windows e pacote XAMPP: servidor web Apche e banco de dados MySQL.
