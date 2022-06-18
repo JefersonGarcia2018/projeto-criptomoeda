@@ -22,10 +22,10 @@ class BidPrice
         'Content-Type: application/json'
         ));
 
-        $data = json_decode(curl_exec($ch));
+        $dados = json_decode(curl_exec($ch));
         curl_close($ch);
 
-        Self::saveBidePrice($data);
+        Self::saveBidePrice($dados);
 
         return true;
     }
@@ -35,13 +35,13 @@ class BidPrice
      * Salva os dados na Base de Dados.
      *
      */
-    private static function saveBidePrice($data) {
+    private static function saveBidePrice($dados) {
 
         $criptomoeda = new Criptomoeda;
 
-        $criptomoeda->symbol = $data->symbol;
-        $criptomoeda->bid_price = $data->price;
-        $criptomoeda->time = $data->time;
+        $criptomoeda->symbol = $dados->symbol;
+        $criptomoeda->bid_price = $dados->price;
+        $criptomoeda->time = $dados->time;
 
         $criptomoeda->save();
     }
