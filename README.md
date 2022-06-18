@@ -25,8 +25,9 @@ cd projeto-criptomoeda
 # Atualizar dependências
 composer install
 
-# Configurar variáveis de ambiente
-cp .env.example .env
+# Renomar o arquivo que contém as variáveis de ambiente
+Em SO Windows: rename .env.example .env
+Em SO Unix: cp .env.example .env
 # após executar o comando acima, crie a Base de Dados MySQL com o mome que você preferir, e atribua este nome a váriável BD_DATABASE que está contida no arquivo .env
 
 #Agora, deve-se gerar a [ APP_KEY ] com o seguinte comando:
